@@ -2,6 +2,9 @@
 
 @implementation VIOVioletOnSiriListController
 
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStyleInsetGrouped;
+}
 
 - (void)viewDidLoad {
 
