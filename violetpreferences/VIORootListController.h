@@ -30,6 +30,7 @@
 @property(nonatomic, retain)UIBarButtonItem* item;
 @property(nonatomic, retain)UIView* headerView;
 @property(nonatomic, retain)UIImageView* headerImageView;
+@property(nonatomic, retain)UIImageView * violetImage;
 @property(nonatomic, retain)UILabel* titleLabel;
 @property(nonatomic, retain)UIImageView* iconView;
 @property(nonatomic, retain)UIBlurEffect* blur;

@@ -97,19 +97,40 @@
 
 
 -(void)setEnabled {
+    [[self violetImage] removeFromSuperview];
+    self.violetImage = [[UIImageView alloc] initWithFrame: CGRectMake(0, 55, 375, 667)];
+
     [[self blurView] setFrame:[[self view] bounds]];
     [[self view] addSubview: [self blurView]];
+    [[self view] addSubview: [self violetImage]];
+    [[self violetImage] setAlpha:0];
 
     if ([[self enableSwitch] isOn]) {
         [[self blurView] setAlpha:0];
+        self.violetImage.image = [UIImage new];
+        self.violetImage.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/enableViolet.png"];
+        [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [[self violetImage] setAlpha:1];
+        } completion:nil];
         [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             [[self blurView] setAlpha:1];
-        }                completion:nil];
+        } completion:nil];
+
+        // do respring
+
     } else {
         [[self blurView] setAlpha: 1];
+        self.violetImage.image = nil;
+        self.violetImage.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/disableViolet.png"];
+        [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [[self violetImage] setAlpha:1];
+        } completion:nil];
         [UIView animateWithDuration:0.4 delay:0 options: UIViewAnimationOptionCurveEaseIn animations:^{
             [[self blurView] setAlpha:0];
         } completion:nil];
+
+        // do respring
+
     }
 
 
