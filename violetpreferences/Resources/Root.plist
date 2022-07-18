@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Violet Settings</string>
+			<key>footerText</key>
+			<string>Require a respring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Violet on SpringBoard</string>
+			<key>detail</key>
+			<string>VIOVioletOnSpringBoardListController</string>
+			<key>VIOSubController</key>
+			<string>subControllers/VioletOnSB</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Violet and Siri</string>
+			<key>detail</key>
+			<string>VIOVioletOnSiriListController</string>
+			<key>VIOSubController</key>
+			<string>subControllers/VioletAndSiri</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Other</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>HBTintedTableCell</string>
+			<key>tintColor</key>
+			<string>#FCDD76</string>
+			<key>label</key>
+			<string>Respring</string>
+			<key>action</key>
+			<string>doRespring</string>
+		</dict>
+
+
+		<dict>
+			<key>cellClass</key>
+			<string>HBPackageTableCell</string>
+			<key>label</key>
+			<string>Cephei</string>
+			<key>packageIdentifier</key>
+			<string>ws.hbang.common</string>
+		</dict>
+
+
+
+	</array>
+	<key>title</key>
+	<string>VioletPreferences</string>
+</dict>
+</plist>
