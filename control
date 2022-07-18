@@ -1,0 +1,9 @@
+Package: com.appleworm.violet
+Name: Violet
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Violet is the best!
+Maintainer: AppleWorm
+Author: AppleWorm
+Section: Tweaks
+Depends: mobilesubstrate, ws.hbang.common (>= 1.14), firmware (>= 13.0)
