@@ -1,5 +1,5 @@
 # Violet
-The maid for your 📱
+The maid for your iPhone
 
 <img src="VioletPreferences/Resources/header.png">
 
