@@ -1,7 +1,7 @@
+<img src="VioletPreferences/Resources/header.png">
+
 # Violet
 The maid for your iPhone
-
-<img src="VioletPreferences/Resources/header.png">
 
 ### Dependencies 
   - [Cephei](https://github.com/hbang/libcephei)
