@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Violet Settings</string>
+			<key>footerText</key>
+			<string>Require a respring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Violet on SpringBoard</string>
+			<key>detail</key>
+			<string>VIOVioletOnSpringBoardListController</string>
+			<key>VIOSubController</key>
+			<string>subControllers/VioletOnSB</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Violet and Siri</string>
+			<key>detail</key>
+			<string>VIOVioletOnSiriListController</string>
+			<key>VIOSubController</key>
+			<string>subControllers/VioletAndSiri</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Other</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>HBTintedTableCell</string>
+			<key>tintColor</key>
+			<string>#FCDD76</string>
+			<key>label</key>
+			<string>Respring</string>
+			<key>action</key>
+			<string>justaRespring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Author</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>AWSourceLinkCell</string>
+			<key>source</key>
+			<string>GitHub</string>
+			<key>footerText</key>
+			<string>See more on my GitHub</string>
+			<key>username</key>
+			<string>AppIeWorm</string>
+			<key>tintColor</key>
+			<string>#CCCCFF</string>
+			<key>height</key>
+			<real>60</real>
+			<key>action</key>
+			<string>goGH</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>AWSourceLinkCell</string>
+			<key>source</key>
+			<string>Telegram</string>
+			<key>username</key>
+			<string>Uncle_Milty</string>
+			<key>tintColor</key>
+			<string>#CCCCFF</string>
+			<key>footerText</key>
+			<string>To contact me</string>
+			<key>height</key>
+			<real>60</real>
+			<key>action</key>
+			<string>goTG</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>AWSourceLinkCell</string>
+			<key>source</key>
+			<string>VK</string>
+			<key>customSourceImage</key>
+			<string>scope</string>
+			<key>username</key>
+			<string>f4ther_of_all</string>
+			<key>tintColor</key>
+			<string>#CCCCFF</string>
+			<key>footerText</key>
+			<string>Me in VK</string>
+			<key>image</key>
+			<string>http://pm1.narvii.com/6681/127c66a66553c831bdefe5fd0f618335afa905eb_00.jpg</string>
+			<key>height</key>
+			<real>60</real>
+			<key>action</key>
+			<string>goVK</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>VioletPreferences</string>
+</dict>
+</plist>
