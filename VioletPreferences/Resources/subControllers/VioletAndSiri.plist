@@ -78,11 +78,9 @@
                 <key>cellClass</key>
                 <string>AWSourceLinkCell</string>
                 <key>source</key>
-                <string>Twitter</string>
-                <key>image</key>
-                <string>https://unavatar.io/github/Traurige</string>
+                <string>GitHub</string>
                 <key>username</key>
-                <string>schneelittchen</string>
+                <string>Traurige</string>
                 <key>height</key>
                 <real>60</real>
                 <key>customSourceImage</key>

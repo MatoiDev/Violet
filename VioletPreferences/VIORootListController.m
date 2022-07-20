@@ -98,12 +98,6 @@
 
 }
 
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//
-//    [self setUpEnabledSwitch];
-//}
-
 - (void)viewWillDisappear:(BOOL)animated {
 
     [super viewWillDisappear:animated];
@@ -257,8 +251,5 @@
 - (void)goTG {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://t.me/Uncle_Milty"] options:@{} completionHandler:nil];
 }
-
-
-
 
 @end

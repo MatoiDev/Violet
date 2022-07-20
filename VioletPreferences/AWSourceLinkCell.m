@@ -1,10 +1,3 @@
-
-//
-//  AWSourceLinkCell.m
-//
-//           by AppleWorm
-//
-
 #import "AWSourceLinkCell.h"
 
 @implementation AWSourceLinkCell
@@ -250,6 +243,7 @@
 }
 
 - (void)visitSource {
+
     if ([[self source] isEqual:@"VK"]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://vk.com/%@", [self userName]]] options:@{} completionHandler:nil];
     } else if ([[self source] isEqual:@"Telegram"]) {
