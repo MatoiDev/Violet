@@ -83,10 +83,12 @@
                 <string>Traurige</string>
                 <key>height</key>
                 <real>60</real>
-                <key>customSourceImage</key>
+                <key>rightImage</key>
                 <string>heart</string>
                 <key>color</key>
                 <string>#CCCCFF</string>
+                <key>rightImageColor</key>
+                <string>#ff0000</string>
                 <key>action</key>
                 <string>thanksAlexa</string>
             </dict>

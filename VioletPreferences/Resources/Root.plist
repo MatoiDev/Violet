@@ -99,7 +99,7 @@
 			<string>AWSourceLinkCell</string>
 			<key>source</key>
 			<string>VK</string>
-			<key>customSourceImage</key>
+			<key>rightImage</key>
 			<string>scope</string>
 			<key>username</key>
 			<string>f4ther_of_all</string>

@@ -1,3 +1,11 @@
+
+//
+//  AWSourceLinkCell.h
+//
+//           by AppleWorm
+//
+
+
 #import "AWSourceLinkCell.h"
 
 @implementation AWSourceLinkCell
@@ -6,26 +14,64 @@
 
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier specifier:specifier];
 
-    UIColor *headerTextColor = [UIColor labelColor];
+    UIColor * tintColor = [UIColor labelColor];
+    UIColor * FTColor = [UIColor new];
+    UIColor * CntrColor = [UIColor new];
+    UIColor * RIColor = [UIColor new];
 
     self.source = specifier.properties[@"source"];
-    self.headerText = specifier.properties[@"headerText"];
-    self.footerText = specifier.properties[@"footerText"];
     self.userName = specifier.properties[@"username"];
-    self.srcImage = specifier.properties[@"customSourceImage"]; // system only
-    self.color = specifier.properties[@"tintColor"];
     self.urlToImage = specifier.properties[@"image"];
+    self.square = specifier.properties[@"square"];
+    self.customSource = specifier.properties[@"customSource"];
+    self.link = specifier.properties[@"link"];
+
+
+    self.headerText = specifier.properties[@"headerText"];
+    self.color = specifier.properties[@"tintColor"];
+
+    self.footerText = specifier.properties[@"footerText"];
+    self.footerTextColor = specifier.properties[@"footerTextColor"];
+    self.useTintForFooterText = specifier.properties[@"tintedFooterText"];
+
+    self.contour = specifier.properties[@"contour"];
+    self.contourColor = specifier.properties[@"contourColor"];
+    self.useTintForContour = specifier.properties[@"tintedContour"];
+
+    self.srcImage = specifier.properties[@"rightImage"]; // system only
+    self.rightImageColor = specifier.properties[@"rightImageColor"];
+    self.useTintForRightImage = specifier.properties[@"tintedRightImage"];
+
+
 
     if (![self headerText]) {
         self.headerText = self.userName;
     }
 
     if (![self footerText]) {
-        self.footerText = self.source;
+
+        if ([self customSource]) {
+            self.footerText = [self customSource];
+        } else {
+            self.footerText = [self source];
+        }
+
     }
 
     if ([self color]) {
-        headerTextColor = [self UIColorWithHEX:[self color]];
+        tintColor = [self UIColorWithHEX:[self color]];
+    }
+
+    if ([self footerTextColor]) {
+        FTColor = [self UIColorWithHEX:[self footerTextColor]];
+    }
+
+    if ([self contourColor]) {
+        CntrColor = [self UIColorWithHEX:[self contourColor]];
+    }
+
+    if ([self rightImageColor]) {
+        RIColor = [self UIColorWithHEX:[self rightImageColor]];
     }
 
     self.sourceArea = [UIImageView new];
@@ -47,34 +93,20 @@
 
             self.sourceImage = [UIImage systemImageNamed:@"terminal"];
 
-        } // else if ([[self source] isEqual: @"VK"]) {
-
-//            self.sourceImage = [UIImage systemImageNamed:@"scoped"];
-
-        // Next release
-//        if (@available(iOS 12.0, *)) {
-//            switch (UIScreen.mainScreen.traitCollection.userInterfaceStyle) {
-//                case UIUserInterfaceStyleDark:
-//                    self.sourceImage = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/AWSourceLinkCellResources/vkLight.png"];
-//                    break;
-//                case UIUserInterfaceStyleLight:
-//                    self.sourceImage = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/AWSourceLinkCellResources/vkDark.png"];
-//                    break;
-//                case UIUserInterfaceStyleUnspecified:
-//
-//                    break;
-//            }
-//        }
-//    }
-        else {
-            // Add them later
+        } else {
             self.sourceImage = [UIImage new];
         }
     }
 
     [[self sourceArea] setImage:[self sourceImage]];
 
-    [[self sourceArea] setTintColor: [UIColor labelColor]];
+    if ([self useTintForRightImage]) {
+        [[self sourceArea] setTintColor: tintColor];
+    } else if ([self rightImageColor]){
+        [[self sourceArea] setTintColor: RIColor];
+    } else {
+        [[self sourceArea] setTintColor: [UIColor labelColor]];
+    }
 
     self.sourceArea.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -105,64 +137,127 @@
 
     } else {
 
-        if ([[self source] isEqual:@"Telegram"]) {
-
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-
-                UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/telegram/%@", [self userName]]]]];
+        if ([self customSource]) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                        [[self userAvatar] setImage:avatar];
+                        [[self userAvatar] setImage: [UIImage new]];
                     }               completion:nil];
                 });
-            });
+        } else {
 
-        } else if ([[self source] isEqual:@"GitHub"]) {
+            if ([[self source] isEqual:@"Telegram"]) {
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
 
-            UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/github/%@", [self userName]]]]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                    [[self userAvatar] setImage:avatar];
-                }               completion:nil];
-            });
-        });
+                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/telegram/%@", [self userName]]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                            [[self userAvatar] setImage:avatar];
+                        }               completion:nil];
+                    });
+                });
 
-    } else if ([[self source] isEqual:@"Twitter"]) {
+            } else if ([[self source] isEqual:@"GitHub"]) {
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
 
-            UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/twitter/%@", [self userName]]]]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                    [[self userAvatar] setImage:avatar];
-                }               completion:nil];
-            });
-        });
+                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/github/%@", [self userName]]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                            [[self userAvatar] setImage:avatar];
+                        }               completion:nil];
+                    });
+                });
 
-    } else {
+            } else if ([[self source] isEqual:@"Twitter"]) {
 
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
 
-            UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/instagram/%@", [self userName]]]]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                    [[self userAvatar] setImage:avatar];
-                }               completion:nil];
-            });
-        });
+                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/twitter/%@", [self userName]]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                            [[self userAvatar] setImage:avatar];
+                        }               completion:nil];
+                    });
+                });
+
+            } else {
+
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+
+                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/instagram/%@", [self userName]]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                            [[self userAvatar] setImage:avatar];
+                        }               completion:nil];
+                    });
+                });
+
+            }
+        }
+}
+    if ([self contour]) {
+
+        UILabel * avatarContour = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 46, 46)];
+        [self addSubview: avatarContour];
+        [avatarContour setBackgroundColor: [UIColor colorWithWhite: 0 alpha: 0]];
+        [[avatarContour layer] setBorderWidth:2];
+
+        if ([self square]) {
+            if ([self square] == false) {
+                [[avatarContour layer] setCornerRadius: 20];
+            } else {
+                [[avatarContour layer] setCornerRadius: 13.5];
+            }
+        } else {
+            [[avatarContour layer] setCornerRadius: 23];
+        }
+
+        if ([self useTintForContour]) {
+            [[avatarContour layer] setBorderColor:[[tintColor colorWithAlphaComponent:1] CGColor]];
+        } else if ([self contourColor]) {
+            [[avatarContour layer] setBorderColor:[[CntrColor colorWithAlphaComponent:1] CGColor]];
+        } else {
+
+            if (@available(iOS 12.0, *)) {
+                switch (UIScreen.mainScreen.traitCollection.userInterfaceStyle) {
+                    case UIUserInterfaceStyleDark:
+                        [[avatarContour layer] setBorderColor:[[UIColor whiteColor] CGColor]];
+                        break;
+                    case UIUserInterfaceStyleLight:
+                        [[avatarContour layer] setBorderColor:[[UIColor blackColor] CGColor]];
+                        break;
+                    case UIUserInterfaceStyleUnspecified:
+                        [[avatarContour layer] setBorderColor:[[UIColor whiteColor] CGColor]];
+                        break;
+                }
+            }
+        }
+
+        avatarContour.translatesAutoresizingMaskIntoConstraints = NO;
+
+        [NSLayoutConstraint activateConstraints:@[
+
+                [[avatarContour topAnchor] constraintEqualToAnchor:[self topAnchor] constant:7],
+                [[avatarContour leadingAnchor] constraintEqualToAnchor:[self leadingAnchor] constant:12],
+                [[avatarContour bottomAnchor] constraintEqualToAnchor:[self bottomAnchor] constant:-7],
+                [[avatarContour widthAnchor] constraintEqualToConstant:46]
+        ]];
 
     }
-}
 
     [self addSubview:[self userAvatar]];
 
     [[self userAvatar] setContentMode:UIViewContentModeScaleAspectFill];
-    [[[self userAvatar] layer] setBorderColor:[[headerTextColor colorWithAlphaComponent:0.1] CGColor]];
+    [[[self userAvatar] layer] setBorderColor:[[tintColor colorWithAlphaComponent:0.1] CGColor]];
     [[[self userAvatar] layer] setBorderWidth:2];
     [[self userAvatar] setClipsToBounds:YES];
-    [[[self userAvatar] layer] setCornerRadius:19];
+
+    if ([self square]) {
+        [[[self userAvatar] layer] setCornerRadius:10];
+    } else {
+        [[[self userAvatar] layer] setCornerRadius:19];
+    }
 
     self.userAvatar.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -173,6 +268,7 @@
             [[[self userAvatar] bottomAnchor] constraintEqualToAnchor:[self bottomAnchor] constant:-11],
             [[[self userAvatar] widthAnchor] constraintEqualToConstant:38]
     ]];
+
 
     self.headerTextArea = [UILabel new];
     [self addSubview:[self headerTextArea]];
@@ -188,7 +284,7 @@
     }
 
     [[self headerTextArea] setFont:[UIFont systemFontOfSize:17 weight:UIFontWeightSemibold]];
-    [[self headerTextArea] setTextColor:headerTextColor];
+    [[self headerTextArea] setTextColor:tintColor];
 
     self.headerTextArea.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -202,11 +298,19 @@
 
 
     self.footerTextArea = [UILabel new];
+
     [self addSubview:[self footerTextArea]];
 
     [[self footerTextArea] setText:[self footerText]];
     [[self footerTextArea] setFont:[UIFont systemFontOfSize:11 weight:UIFontWeightRegular]];
-    [[self footerTextArea] setTextColor:[[UIColor labelColor] colorWithAlphaComponent:0.6]];
+
+    if ([self useTintForFooterText]) {
+        [[self footerTextArea] setTextColor:[tintColor colorWithAlphaComponent:0.6]];
+    } else if ([self footerTextColor]) {
+        [[self footerTextArea] setTextColor:[FTColor colorWithAlphaComponent:0.6]];
+    } else {
+        [[self footerTextArea] setTextColor:[[UIColor labelColor] colorWithAlphaComponent:0.6]];
+    }
 
     self.footerTextArea.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -244,18 +348,21 @@
 
 - (void)visitSource {
 
-    if ([[self source] isEqual:@"VK"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://vk.com/%@", [self userName]]] options:@{} completionHandler:nil];
-    } else if ([[self source] isEqual:@"Telegram"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://t.me/%@", [self userName]]] options:@{} completionHandler:nil];
-    } else if ([[self source] isEqual:@"GitHub"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://github.com/%@", [self userName]]] options:@{} completionHandler:nil];
-    } else if ([[self source] isEqual:@"Twitter"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/%@", [self userName]]] options:@{} completionHandler:nil];
+    if ([self customSource]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self link]] options:@{} completionHandler:nil];
     } else {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://instagram.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        if ([[self source] isEqual:@"VK"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://vk.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        } else if ([[self source] isEqual:@"Telegram"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://t.me/%@", [self userName]]] options:@{} completionHandler:nil];
+        } else if ([[self source] isEqual:@"GitHub"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://github.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        } else if ([[self source] isEqual:@"Twitter"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://instagram.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        }
     }
-
 }
 
 - (UIColor *)UIColorWithHEX:(NSString *)hexString {
@@ -266,6 +373,5 @@
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16) / 255.0 green:((rgbValue & 0xFF00)
             >> 8) / 255.0   blue:(rgbValue & 0xFF) / 255.0 alpha:1.0];
 }
-
 
 @end
