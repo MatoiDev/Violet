@@ -38,5 +38,7 @@ BOOL showOnSiri = NO;
 
 BOOL hideOrb = NO;
 
+BOOL _isUILocked = YES;
+
 NSString * blurOnSBAmountValue = @"0.5";
 NSString * blurOnSiriAmountValue = @"0.5";
