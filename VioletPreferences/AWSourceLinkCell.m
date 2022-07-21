@@ -181,6 +181,18 @@
                     });
                 });
 
+            } else if ([[self source] isEqual: @"Reddit"]) {
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+
+                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/reddit/%@", [self userName]]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                            [[self userAvatar] setImage:avatar];
+                        }               completion:nil];
+                    });
+                });
+                
             } else {
 
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
@@ -359,6 +371,8 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://github.com/%@", [self userName]]] options:@{} completionHandler:nil];
         } else if ([[self source] isEqual:@"Twitter"]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/%@", [self userName]]] options:@{} completionHandler:nil];
+        } else if ([[self source] isEqual: @"Reddit"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://www.reddit.com/user/%@", [self userName]]] options:@{} completionHandler:nil];
         } else {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://instagram.com/%@", [self userName]]] options:@{} completionHandler:nil];
         }
