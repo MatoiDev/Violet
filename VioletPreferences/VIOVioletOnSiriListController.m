@@ -57,8 +57,5 @@
 
 - (BOOL)shouldReloadSpecifiersOnResume { return false; }
 
--(void)thanksAlexa {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/Traurige"] options:@{} completionHandler:nil];
-}
 
 @end

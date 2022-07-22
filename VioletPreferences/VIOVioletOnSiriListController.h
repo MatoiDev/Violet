@@ -14,6 +14,4 @@
 @property(nonatomic, retain)UIVisualEffectView * preferenceBundleSiriSectionBlur;
 @property(nonatomic, retain)VIOPBAppearance * appearanceSettings;
 
-- (void)thanksAlexa;
-
 @end

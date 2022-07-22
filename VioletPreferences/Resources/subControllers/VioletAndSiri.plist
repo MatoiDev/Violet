@@ -64,34 +64,6 @@
                 <key>key</key>
                 <string>HideOrb</string>
             </dict>
-            <dict>
-                <key>cell</key>
-                <string>PSGroupCell</string>
-                <key>label</key>
-                <string>Special Thanks</string>
-                <key>footerText</key>
-                <string>Spied a couple of hooks from your Astolfo :D</string>
-            </dict>
-            <dict>
-                <key>cell</key>
-                <string>PSButtonCell</string>
-                <key>cellClass</key>
-                <string>AWSourceLinkCell</string>
-                <key>source</key>
-                <string>GitHub</string>
-                <key>username</key>
-                <string>Traurige</string>
-                <key>height</key>
-                <real>60</real>
-                <key>rightImage</key>
-                <string>heart</string>
-                <key>color</key>
-                <string>#CCCCFF</string>
-                <key>rightImageColor</key>
-                <string>#ff0000</string>
-                <key>action</key>
-                <string>thanksAlexa</string>
-            </dict>
         </array>
         <key>title</key>
         <string>VioletPreferences</string>
