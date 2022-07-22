@@ -14,8 +14,3 @@ iPhone running 14.x & [15.x?]
 
 ### License
 Standart MIT license
-
-
-### Credits
-* Methods of Siri appearance and disappearance
-  * [Alexa](https://github.com/Traurige)
