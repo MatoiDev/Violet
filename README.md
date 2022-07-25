@@ -13,4 +13,4 @@ The maid for your iPhone
 iPhone running 14.x & [15.x?]
 
 ### License
-Standart MIT license
+[Standart MIT license](https://github.com/AppIeWorm/Violet/blob/main/LICENSE)
