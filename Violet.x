@@ -4,7 +4,7 @@
 
 %hook SUICOrbView
 
-- (id)initWithFrame:(CGRect)arg1 { // remove siris's Orb
+- (id)initWithFrame:(CGRect)arg1 {
 
     if (hideOrb){
         return %orig(CGRectMake(0, 0, 0, 0));
@@ -15,8 +15,6 @@
 
 %end
 
-
-// thanks Alexa
 %hook SiriUIBackgroundBlurViewController
 
 - (void)viewDidLoad {
