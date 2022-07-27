@@ -266,7 +266,6 @@
         [preferences registerObject: &blurOnSiriAmountValue default: @"0.5" forKey: @"OnSiriBlur"];
         [preferences registerBool: &hideOrb default: YES forKey: @"HideOrb"];
     }
-
     if (showOnSB) {
         %init(VioletOnSpringBoard);
     }
