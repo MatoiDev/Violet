@@ -161,12 +161,23 @@
 - (void)setEnabled {
 
     [[self violetImage] removeFromSuperview];
-    self.violetImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 55, 375, 667)];
+    self.violetImage = [[UIImageView alloc] initWithFrame: [[self view] frame]];
 
     [[self blurOnPBScreen] setFrame:[[self view] bounds]];
     [[self view] addSubview:[self blurOnPBScreen]];
     [[self view] addSubview:[self violetImage]];
     [[self violetImage] setAlpha:0];
+
+    [[self violetImage] setTranslatesAutoresizingMaskIntoConstraints: NO];
+
+    [NSLayoutConstraint activateConstraints:@[
+
+            [self.violetImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0],
+            [self.violetImage.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:15],
+            [self.violetImage.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-15],
+            [self.violetImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0]
+
+    ]];
 
     if ([[[self preferences] objectForKey:@"Enabled"] isEqual:@(YES)]) {
 

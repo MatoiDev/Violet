@@ -1,0 +1,12 @@
+Package: com.appleworm.violet
+Name: Violet
+Architecture: iphoneos-arm
+Description: The maid for your 📱 
+Maintainer: AppleWorm <applewormdev@gmail.com>
+Author: AppleWorm <applewormdev@gmail.com>
+Section: Tweaks
+dev: AppleWorm
+Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0)
+Icon: file:///Library/PreferenceBundles/VioletPreferences.bundle/icon_large.png
+Version: 1.0.0-10+debug
+Installed-Size: 2516
