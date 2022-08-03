@@ -22,7 +22,6 @@ UIImageView * helloMaster = nil;
 UIImageView * violetOnSiriWhenAppearImage;
 UIImageView * violetOnSiriWhenDisappearImage;
 
-
 UIVisualEffectView * onSiriBlur = nil;
 UIVisualEffectView * onSBoardBlur = nil;
 
