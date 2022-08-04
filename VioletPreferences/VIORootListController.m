@@ -3,6 +3,15 @@
 
 @implementation VIORootListController
 
+//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier specifier:(id)specifier {
+//    self = [super initWithStyle:UITableViewStyleInsetGrouped reuseIdentifier:reuseIdentifier specifier:specifier];
+//    return self;
+//}
+
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStyleInsetGrouped;
+}
+
 -(void)viewDidLoad {
 
     [super viewDidLoad];
@@ -102,10 +111,10 @@
 
     [super viewWillDisappear:animated];
 
-    [[self blurOnPBScreen] setAlpha:1];
+//    [[self blurOnPBScreen] setAlpha:1];
 
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        [[self blurOnPBScreen] setAlpha:0];
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [[self blurOnPBScreen] setAlpha:1];
     } completion:nil];
 
 }

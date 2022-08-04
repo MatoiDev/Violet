@@ -2,6 +2,9 @@
 
 @implementation VIOVioletOnSiriListController
 
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStyleInsetGrouped;
+}
 
 - (void)viewDidLoad {
 
@@ -20,7 +23,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     [super viewWillAppear:animated];
-
+    [[self preferenceBundleSiriSectionBlur] setAlpha:1];
     [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{ [[self preferenceBundleSiriSectionBlur] setAlpha:0]; } completion:nil];
 
 }

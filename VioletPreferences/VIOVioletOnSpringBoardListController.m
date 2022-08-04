@@ -3,6 +3,9 @@
 
 @implementation VIOVioletOnSpringBoardListController
 
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStyleInsetGrouped;
+}
 
 - (void)viewDidLoad {
 
@@ -21,7 +24,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 
     [super viewWillAppear:animated];
-
+    [[self preferenceBundleOnSpringBoardSectionBlur] setAlpha:1];
     [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{ [[self preferenceBundleOnSpringBoardSectionBlur] setAlpha:0]; } completion:nil];
 
 }
