@@ -3,17 +3,6 @@
 
 @implementation VIORootListController
 
-
-//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier specifier:(id)specifier {
-//    self = [super initWithStyle:UITableViewStyleInsetGrouped reuseIdentifier:reuseIdentifier specifier:specifier];
-//    return self;
-//}
-
-- (UITableViewStyle)tableViewStyle {
-    return UITableViewStyleInsetGrouped;
-}
-
-
 -(void)viewDidLoad {
 
     [super viewDidLoad];

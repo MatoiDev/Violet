@@ -3,9 +3,6 @@
 
 @implementation VIOVioletOnSpringBoardListController
 
-- (UITableViewStyle)tableViewStyle {
-    return UITableViewStyleInsetGrouped;
-}
 
 - (void)viewDidLoad {
 
