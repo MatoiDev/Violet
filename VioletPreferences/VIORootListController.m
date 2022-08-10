@@ -49,7 +49,7 @@
 
     self.VioletVersionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     [[self VioletVersionLabel] setFont:[UIFont boldSystemFontOfSize:17]];
-    [[self VioletVersionLabel] setText:@"v1.0.0"];
+    [[self VioletVersionLabel] setText:@"v1.1.0"];
     [[self VioletVersionLabel] setTextColor:[UIColor labelColor]];
     [[self VioletVersionLabel] setTextAlignment:NSTextAlignmentCenter];
     [[[self navigationItem] titleView] addSubview:[self VioletVersionLabel]];

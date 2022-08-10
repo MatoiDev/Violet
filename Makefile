@@ -10,6 +10,7 @@ Violet_FILES = Violet.x
 Violet_CFLAGS = -fobjc-arc
 Violet_FRAMEWORKS = UIKit
 Violet_EXTRA_FRAMEWORKS += Cephei
+Violet_LIBRARIES = gcuniversal
 
 SUBPROJECTS += violetpreferences
 

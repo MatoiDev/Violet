@@ -8,7 +8,7 @@
                 <key>cell</key>
                 <string>PSGroupCell</string>
                 <key>label</key>
-                <string>Set Violet instead of Siri</string>
+                <string>Enable Violet on Siri</string>
             </dict>
             <dict>
                 <key>cell</key>
@@ -16,7 +16,7 @@
                 <key>default</key>
                 <true/>
                 <key>label</key>
-                <string>Set Violet</string>
+                <string>Enable</string>
                 <key>defaults</key>
                 <string>com.appleworm.violetprefrences</string>
                 <key>key</key>
@@ -48,6 +48,72 @@
             </dict>
             <dict>
                 <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>default</key>
+                <integer>0</integer>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>label</key>
+                <string>Blur:</string>
+                <key>key</key>
+                <string>BlurStyleOnSiri</string>
+                <key>validValues</key>
+                <array>
+                    <integer>0</integer>
+                    <integer>1</integer>
+                    <integer>2</integer>
+                    <integer>3</integer>
+                    <integer>4</integer>
+                    <integer>5</integer>
+                    <integer>6</integer>
+                    <integer>7</integer>
+                    <integer>8</integer>
+                    <integer>9</integer>
+                    <integer>10</integer>
+                    <integer>11</integer>
+                    <integer>12</integer>
+                    <integer>13</integer>
+                    <integer>14</integer>
+                    <integer>15</integer>
+                    <integer>16</integer>
+                    <integer>17</integer>
+                    <integer>18</integer>
+                    <integer>19</integer>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Adaptive Ultra Thin</string>
+                    <string>Adaptive Thin</string>
+                    <string>Adaptive</string>
+                    <string>Adaptive Thick</string>
+                    <string>Adaptive Chrome</string>
+                    <string>Light Ultra Thin</string>
+                    <string>Light Thin</string>
+                    <string>Light</string>
+                    <string>Light Thick</string>
+                    <string>Light Chrome</string>
+                    <string>Dark Ultra Thin</string>
+                    <string>Dark Thin</string>
+                    <string>Dark</string>
+                    <string>Dark Thick</string>
+                    <string>Dark Chrome</string>
+                    <string>Additional Extra Light</string>
+                    <string>Additional Light</string>
+                    <string>Additional Dark</string>
+                    <string>Additional Regular</string>
+                    <string>Additional Prominent</string>
+                </array>
+<!--                <key>shortTitles</key>-->
+<!--                <array>-->
+<!--                    <string>Adaptive GG</string>-->
+<!--                    <string>Light HH</string>-->
+<!--                    <string>Dark DD</string>-->
+<!--                </array>-->
+            </dict>
+            <dict>
+                <key>cell</key>
                 <string>PSGroupCell</string>
                 <key>label</key>
                 <string>Sphere</string>
@@ -63,6 +129,42 @@
                 <string>com.appleworm.violetprefrences</string>
                 <key>key</key>
                 <string>HideOrb</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>label</key>
+                <string>Custom Image</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSwitchCell</string>
+                <key>default</key>
+                <false/>
+                <key>label</key>
+                <string>Use custom image</string>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>key</key>
+                <string>UseCustomImage</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkCell</string>
+                <key>cellClass</key>
+                <string>GcImagePickerCell</string>
+                <key>label</key>
+                <string>Custom image</string>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>key</key>
+                <string>CustomImage</string>
+                <key>usesPhotos</key>
+                <true/>
+                <key>usesVideos</key>
+                <false/>
+                <key>videoQuality</key>
+                <integer>1</integer>
             </dict>
         </array>
         <key>title</key>

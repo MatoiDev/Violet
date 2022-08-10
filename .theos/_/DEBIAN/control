@@ -6,7 +6,7 @@ Maintainer: AppleWorm <applewormdev@gmail.com>
 Author: AppleWorm <applewormdev@gmail.com>
 Section: Tweaks
 dev: AppleWorm
-Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0)
+Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0), com.mrgcgamer.libgcuniversal
 Icon: file:///Library/PreferenceBundles/VioletPreferences.bundle/icon_large.png
-Version: 1.0.0-18+debug
-Installed-Size: 2516
+Version: 1.1.0-1+debug
+Installed-Size: 2528

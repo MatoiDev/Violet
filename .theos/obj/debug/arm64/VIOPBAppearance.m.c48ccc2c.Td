@@ -1,6 +1,5 @@
-/Users/worm/desktop/GitProjects/Violet/.theos/obj/debug/arm64/VIOVioletOnSpringBoardListController.m.8fb9678d.o: \
-  VIOVioletOnSpringBoardListController.m /Users/worm/theos/Prefix.pch \
-  VIOVioletOnSpringBoardListController.h \
+/Users/worm/Desktop/GitProjects/Violet/.theos/obj/debug/arm64/VIOPBAppearance.m.c48ccc2c.o: \
+  VIOPBAppearance.m /Users/worm/theos/Prefix.pch VIORootListController.h \
   /Users/worm/theos/vendor/include/Preferences/module.modulemap \
   /Users/worm/theos/vendor/include/libhooker/module.modulemap \
   /Users/worm/theos/vendor/include/AppList/module.modulemap \
@@ -35,7 +34,7 @@
 
 /Users/worm/theos/Prefix.pch:
 
-VIOVioletOnSpringBoardListController.h:
+VIORootListController.h:
 
 /Users/worm/theos/vendor/include/Preferences/module.modulemap:
 
