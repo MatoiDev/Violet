@@ -2,6 +2,12 @@
 
 # Violet
 The maid for your iPhone
+## Simple preferences
+<img src="githubAssets/VioletPrefs.png">
+
+## Preview
+<img src="githubAssets/VioletPreview.png">
+
 
 ### Dependencies 
   - [Cephei](https://github.com/hbang/libcephei)
