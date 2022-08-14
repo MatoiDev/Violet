@@ -42,6 +42,7 @@ BOOL showOnSiri = NO;
 BOOL useCustomImage = NO;
 BOOL useCustomImageOnUnlock = NO;
 BOOL hideOrb = NO;
+BOOL fillOnSB = NO;
 
 BOOL _isUILocked = YES;
 

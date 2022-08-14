@@ -150,6 +150,18 @@
             </dict>
             <dict>
                 <key>cell</key>
+                <string>PSSwitchCell</string>
+                <key>default</key>
+                <false/>
+                <key>label</key>
+                <string>Fill content mode</string>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>key</key>
+                <string>FillSB</string>
+            </dict>
+            <dict>
+                <key>cell</key>
                 <string>PSStaticTextCell</string>
                 <key>label</key>
                 <string>Horizontal alignment</string>

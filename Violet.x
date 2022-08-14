@@ -224,6 +224,20 @@
 
 %hook SBHomeScreenViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    %orig;
+    if (useCustomImageOnUnlock) {
+        [NSLayoutConstraint activateConstraints:@[
+
+            [waitingForLord.widthAnchor constraintEqualToConstant:self.view.bounds.size.width],
+            [waitingForLord.heightAnchor constraintEqualToConstant:self.view.bounds.size.height],
+            [waitingForLord.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:[xPosOnSB doubleValue]],
+            [waitingForLord.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:[yPosOnSB doubleValue]]
+
+        ]];
+   }
+  }
+
 - (void)viewDidLoad {
 
     %orig;
@@ -305,7 +319,11 @@
     waitingForLord = [[UIImageView alloc] initWithFrame: [[self view] frame]];
 
     [self.view addSubview:waitingForLord];
-    [waitingForLord setContentMode:UIViewContentModeScaleAspectFit];
+    if (fillOnSB) {
+        [waitingForLord setContentMode:UIViewContentModeScaleAspectFill];
+    } else {
+        [waitingForLord setContentMode:UIViewContentModeScaleAspectFit];
+    }
     [waitingForLord setClipsToBounds:YES];
 
     waitingForLord.translatesAutoresizingMaskIntoConstraints = NO;
@@ -314,14 +332,6 @@
         customImageOnUnlock = [GcImagePickerUtils imageFromDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImageOnUnlock"];
         waitingForLord.image = customImageOnUnlock;
         [waitingForLord setAlpha: 1];
-        [NSLayoutConstraint activateConstraints:@[
-
-            [waitingForLord.widthAnchor constraintEqualToConstant:375],
-            [waitingForLord.heightAnchor constraintEqualToConstant:667],
-            [waitingForLord.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:[xPosOnSB doubleValue]],
-            [waitingForLord.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:[yPosOnSB doubleValue]]
-
-        ]];
 
     } else {
         waitingForLord.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/Violetsbehavor/waitingForLord.png"];
@@ -435,22 +445,27 @@
     // Violet on SpringBoard
     [preferences registerBool: &showOnSB default: YES forKey: @"ShowOnSB"];
     if (showOnSB) {
+
         [preferences registerObject: &blurOnSBAmountValue default: @"0.5" forKey: @"OnSBBlur"];
-        [preferences registerBool: &useCustomImageOnUnlock default: NO forKey: @"UseCustomImageOnUnlock"];
         [preferences registerObject: &blurEffectStyleOnSB default: @"0" forKey: @"BlurStyleOnSB"];
         [preferences registerObject: &xPosOnSB default: @"0" forKey: @"SBXPosition"];
         [preferences registerObject: &yPosOnSB default: @"0" forKey: @"SBYPosition"];
+        [preferences registerBool: &useCustomImageOnUnlock default: NO forKey: @"UseCustomImageOnUnlock"];
+        [preferences registerBool: &fillOnSB default: NO forKey: @"FillSB"];
+
     }
 
     // Violet on Siri
     [preferences registerBool: &showOnSiri default: YES forKey: @"ShowOnSiri"];
     if (showOnSiri) {
+
         [preferences registerObject: &blurOnSiriAmountValue default: @"0.5" forKey: @"OnSiriBlur"];
-        [preferences registerBool: &hideOrb default: YES forKey: @"HideOrb"];
-        [preferences registerBool: &useCustomImage default: NO forKey: @"UseCustomImage"];
         [preferences registerObject: &blurEffectStyleOnSiri default: @"0" forKey: @"BlurStyleOnSiri"];
         [preferences registerObject: &xPosOnSiri default: @"0" forKey: @"SiriXPosition"];
         [preferences registerObject: &yPosOnSiri default: @"0" forKey: @"SiriYPosition"];
+        [preferences registerBool: &hideOrb default: YES forKey: @"HideOrb"];
+        [preferences registerBool: &useCustomImage default: NO forKey: @"UseCustomImage"];
+
     }
     if (showOnSB) {
         %init(VioletOnSpringBoard);
