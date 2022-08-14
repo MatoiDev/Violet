@@ -48,5 +48,11 @@ BOOL _isUILocked = YES;
 NSString * blurOnSBAmountValue = @"0.5";
 NSString * blurOnSiriAmountValue = @"0.5";
 
+NSString * xPosOnSB = @"0";
+NSString * yPosOnSB = @"0";
+
+NSString * xPosOnSiri = @"0";
+NSString * yPosOnSiri = @"0";
+
 NSString * blurEffectStyleOnSiri = @"0";
 NSString * blurEffectStyleOnSB = @"0";

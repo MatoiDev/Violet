@@ -111,15 +111,26 @@
     }
 
     violetOnSiriWhenAppearImage.translatesAutoresizingMaskIntoConstraints = NO;
+    if (useCustomImage) {
+        [NSLayoutConstraint activateConstraints:@[
 
-    [NSLayoutConstraint activateConstraints:@[
+            [violetOnSiriWhenAppearImage.widthAnchor constraintEqualToConstant:self.view.bounds.size.width],
+            [violetOnSiriWhenAppearImage.heightAnchor constraintEqualToConstant:self.view.bounds.size.height],
+            [violetOnSiriWhenAppearImage.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:[xPosOnSiri doubleValue]],
+            [violetOnSiriWhenAppearImage.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:[yPosOnSiri doubleValue]]
 
-        [violetOnSiriWhenAppearImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0],
-        [violetOnSiriWhenAppearImage.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:0],
-        [violetOnSiriWhenAppearImage.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:0],
-        [violetOnSiriWhenAppearImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0]
+        ]];
+    } else {
+        [NSLayoutConstraint activateConstraints:@[
 
-    ]];
+            [violetOnSiriWhenAppearImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0],
+            [violetOnSiriWhenAppearImage.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:0],
+            [violetOnSiriWhenAppearImage.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:0],
+            [violetOnSiriWhenAppearImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0]
+
+        ]];
+    }
+
 
     violetOnSiriWhenDisappearImage = [[UIImageView alloc] initWithFrame: [[self view] frame]];
 
@@ -131,14 +142,27 @@
 
     violetOnSiriWhenDisappearImage.translatesAutoresizingMaskIntoConstraints = NO;
 
-    [NSLayoutConstraint activateConstraints:@[
 
-        [violetOnSiriWhenDisappearImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0],
-        [violetOnSiriWhenDisappearImage.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:0],
-        [violetOnSiriWhenDisappearImage.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:0],
-        [violetOnSiriWhenDisappearImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0]
+    if (useCustomImage) {
+        [NSLayoutConstraint activateConstraints:@[
 
-    ]];
+            [violetOnSiriWhenDisappearImage.widthAnchor constraintEqualToConstant:self.view.bounds.size.width],
+            [violetOnSiriWhenDisappearImage.heightAnchor constraintEqualToConstant:self.view.bounds.size.height],
+            [violetOnSiriWhenDisappearImage.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:[xPosOnSiri doubleValue]],
+            [violetOnSiriWhenDisappearImage.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:[yPosOnSiri doubleValue]]
+
+        ]];
+    } else {
+        [NSLayoutConstraint activateConstraints:@[
+
+            [violetOnSiriWhenDisappearImage.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0],
+            [violetOnSiriWhenDisappearImage.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:0],
+            [violetOnSiriWhenDisappearImage.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:0],
+            [violetOnSiriWhenDisappearImage.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0]
+
+        ]];
+    }
+
 
     [violetOnSiriWhenDisappearImage setAlpha:0];
     [violetOnSiriWhenAppearImage setAlpha:0];
@@ -283,21 +307,34 @@
     [self.view addSubview:waitingForLord];
     [waitingForLord setContentMode:UIViewContentModeScaleAspectFit];
     [waitingForLord setClipsToBounds:YES];
+
+    waitingForLord.translatesAutoresizingMaskIntoConstraints = NO;
+
     if (useCustomImageOnUnlock) {
         customImageOnUnlock = [GcImagePickerUtils imageFromDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImageOnUnlock"];
         waitingForLord.image = customImageOnUnlock;
+        [waitingForLord setAlpha: 1];
+        [NSLayoutConstraint activateConstraints:@[
+
+            [waitingForLord.widthAnchor constraintEqualToConstant:375],
+            [waitingForLord.heightAnchor constraintEqualToConstant:667],
+            [waitingForLord.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:[xPosOnSB doubleValue]],
+            [waitingForLord.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:[yPosOnSB doubleValue]]
+
+        ]];
+
     } else {
         waitingForLord.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/Violetsbehavor/waitingForLord.png"];
+
+        [NSLayoutConstraint activateConstraints:@[
+
+            [waitingForLord.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:-63],
+            [waitingForLord.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:12],
+            [waitingForLord.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-12],
+            [waitingForLord.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: 88]
+
+        ]];
     }
-    waitingForLord.translatesAutoresizingMaskIntoConstraints = NO;
-    [NSLayoutConstraint activateConstraints:@[
-
-        [waitingForLord.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:25],
-        [waitingForLord.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:12],
-        [waitingForLord.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-12],
-        [waitingForLord.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: 175]
-
-    ]];
 
     if (!useCustomImageOnUnlock) {
         helloMaster = [[UIImageView alloc] initWithFrame: [[self view] frame]];
@@ -312,10 +349,10 @@
 
         [NSLayoutConstraint activateConstraints:@[
 
-            [helloMaster.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:25],
+            [helloMaster.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:-63],
             [helloMaster.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:12],
             [helloMaster.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-12],
-            [helloMaster.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: 175]
+            [helloMaster.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: 88]
 
         ]];
 
@@ -401,6 +438,8 @@
         [preferences registerObject: &blurOnSBAmountValue default: @"0.5" forKey: @"OnSBBlur"];
         [preferences registerBool: &useCustomImageOnUnlock default: NO forKey: @"UseCustomImageOnUnlock"];
         [preferences registerObject: &blurEffectStyleOnSB default: @"0" forKey: @"BlurStyleOnSB"];
+        [preferences registerObject: &xPosOnSB default: @"0" forKey: @"SBXPosition"];
+        [preferences registerObject: &yPosOnSB default: @"0" forKey: @"SBYPosition"];
     }
 
     // Violet on Siri
@@ -410,6 +449,8 @@
         [preferences registerBool: &hideOrb default: YES forKey: @"HideOrb"];
         [preferences registerBool: &useCustomImage default: NO forKey: @"UseCustomImage"];
         [preferences registerObject: &blurEffectStyleOnSiri default: @"0" forKey: @"BlurStyleOnSiri"];
+        [preferences registerObject: &xPosOnSiri default: @"0" forKey: @"SiriXPosition"];
+        [preferences registerObject: &yPosOnSiri default: @"0" forKey: @"SiriYPosition"];
     }
     if (showOnSB) {
         %init(VioletOnSpringBoard);

@@ -148,6 +148,54 @@
                 <key>videoQuality</key>
                 <integer>1</integer>
             </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSStaticTextCell</string>
+                <key>label</key>
+                <string>Horizontal alignment</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSliderCell</string>
+                <key>default</key>
+                <real>0.0</real>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>min</key>
+                <real>-150.0</real>
+                <key>max</key>
+                <real>150.0</real>
+                <key>showValue</key>
+                <true/>
+                <key>isSegmented</key>
+                <false/>
+                <key>key</key>
+                <string>SBXPosition</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSStaticTextCell</string>
+                <key>label</key>
+                <string>Vertical alignment</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSliderCell</string>
+                <key>default</key>
+                <real>0.0</real>
+                <key>defaults</key>
+                <string>com.appleworm.violetprefrences</string>
+                <key>min</key>
+                <real>-150.0</real>
+                <key>max</key>
+                <real>150.0</real>
+                <key>showValue</key>
+                <true/>
+                <key>isSegmented</key>
+                <false/>
+                <key>key</key>
+                <string>SBYPosition</string>
+            </dict>
         </array>
         <key>title</key>
         <string>VioletPreferences</string>

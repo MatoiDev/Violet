@@ -111,8 +111,6 @@
 
     [super viewWillDisappear:animated];
 
-//    [[self blurOnPBScreen] setAlpha:1];
-
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         [[self blurOnPBScreen] setAlpha:1];
     } completion:nil];
@@ -121,8 +119,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-
 
     [[self titleTimer] invalidate];
     self.titleTimer =  [NSTimer scheduledTimerWithTimeInterval:3.0
