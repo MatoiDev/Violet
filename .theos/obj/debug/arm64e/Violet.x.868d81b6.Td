@@ -12,6 +12,8 @@
   /Users/worm/theos/vendor/include/Preferences/module.modulemap \
   /Users/worm/theos/vendor/lib/Cephei.framework/Headers/HBPreferences.h \
   /Users/worm/theos/include/GcUniversal/GcImagePickerUtils.h \
+  /Users/worm/theos/vendor/include/SpringBoard/SBApplication.h \
+  /Users/worm/theos/vendor/include/SpringBoard/SBActivationSettings.h \
   /Users/worm/theos/vendor/include/substrate.h
 
 /Users/worm/theos/Prefix.pch:
@@ -37,5 +39,9 @@
 /Users/worm/theos/vendor/lib/Cephei.framework/Headers/HBPreferences.h:
 
 /Users/worm/theos/include/GcUniversal/GcImagePickerUtils.h:
+
+/Users/worm/theos/vendor/include/SpringBoard/SBApplication.h:
+
+/Users/worm/theos/vendor/include/SpringBoard/SBActivationSettings.h:
 
 /Users/worm/theos/vendor/include/substrate.h:

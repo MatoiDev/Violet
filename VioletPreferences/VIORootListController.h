@@ -30,6 +30,8 @@
 @property(nonatomic, retain)UIBlurEffect* blurEffect;
 @property(nonatomic, retain)UIVisualEffectView* blurOnPBScreen;
 
+@property (nonatomic, retain)NSString * violetVersion;
+
 - (void)setEnabled;
 - (void)doRespring;
 - (void)justaRespring;

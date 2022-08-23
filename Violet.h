@@ -1,7 +1,12 @@
 #import <UIKit/UIKit.h>
 #import <Cephei/HBPreferences.h>
 #import "GcUniversal/GcImagePickerUtils.h"
+#import <SpringBoard/SBApplication.h>
 
+@interface SpringBoard : UIApplication
++(id)sharedApplication;
+-(SBApplication*)_accessibilityFrontMostApplication;
+@end
 
 @interface SBHomeScreenViewController : UIViewController
 @end

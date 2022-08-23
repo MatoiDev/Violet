@@ -1,6 +1,6 @@
 Package: com.appleworm.violet
 Name: Violet
-Version: 1.1.0
+Version: 1.1.1
 Architecture: iphoneos-arm
 Description: The maid for your 📱 
 Maintainer: AppleWorm <applewormdev@gmail.com>

@@ -15,7 +15,7 @@
 -(void)viewDidLoad {
 
     [super viewDidLoad];
-    
+    self.violetVersion = @"v1.1.1";
     self.appearanceSettings = [VIOPBAppearance new];
     self.hb_appearanceSettings = [self appearanceSettings];
     self.preferences = [[HBPreferences alloc] initWithIdentifier:@"com.appleworm.violetprefrences"];
@@ -49,7 +49,7 @@
 
     self.VioletVersionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     [[self VioletVersionLabel] setFont:[UIFont boldSystemFontOfSize:17]];
-    [[self VioletVersionLabel] setText:@"v1.1.0"];
+    [[self VioletVersionLabel] setText: self.violetVersion];
     [[self VioletVersionLabel] setTextColor:[UIColor labelColor]];
     [[self VioletVersionLabel] setTextAlignment:NSTextAlignmentCenter];
     [[[self navigationItem] titleView] addSubview:[self VioletVersionLabel]];

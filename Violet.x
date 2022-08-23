@@ -1,5 +1,6 @@
 #import <Violet.h>
 
+
 %group VioletOnSiri
 
 %hook SUICOrbView
@@ -236,7 +237,7 @@
 
         ]];
    }
-  }
+}
 
 - (void)viewDidLoad {
 
@@ -400,34 +401,40 @@
     if (_isUILocked) {
         _isUILocked = NO;
         [onSBoardBlur setAlpha: [blurOnSBAmountValue doubleValue]];
-        if (!useCustomImageOnUnlock) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-                [UIView animateWithDuration:0.4 delay:0 options: UIViewAnimationOptionCurveEaseIn animations:^{
-                    [helloMaster setAlpha: 1];
-                } completion: ^(BOOL finished){
-                    [waitingForLord setAlpha: 0];
-                }];
+        if (![[%c(SpringBoard) sharedApplication] _accessibilityFrontMostApplication]) {
+            if (!useCustomImageOnUnlock) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [UIView animateWithDuration:1 animations:^{
-                        [helloMaster setAlpha:0];
-                        [onSBoardBlur setAlpha: 0];
+                    [UIView animateWithDuration:0.4 delay:0 options: UIViewAnimationOptionCurveEaseIn animations:^{
+                        [helloMaster setAlpha: 1];
+                    } completion: ^(BOOL finished){
+                        [waitingForLord setAlpha: 0];
                     }];
+
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [UIView animateWithDuration:1 animations:^{
+                            [helloMaster setAlpha:0];
+                            [onSBoardBlur setAlpha: 0];
+                        }];
+                    });
                 });
-            });
+            } else {
+
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [UIView animateWithDuration:1 animations:^{
+                     [waitingForLord setAlpha:0];
+                     [onSBoardBlur setAlpha: 0];
+                 }];
+             });
+
+            }
         } else {
-
-         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-             [UIView animateWithDuration:1 animations:^{
-                 [waitingForLord setAlpha:0];
-                 [onSBoardBlur setAlpha: 0];
-             }];
-         });
-
+            [helloMaster setAlpha:0];
+            [waitingForLord setAlpha:0];
+            [onSBoardBlur setAlpha: 0];
         }
     }
-
 }
 
 %end
