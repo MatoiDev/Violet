@@ -261,7 +261,7 @@
 }
 
 - (void)goGH {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/AppIeWorm"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/MatoiDev"] options:@{} completionHandler:nil];
 }
 
 - (void)goTG {
