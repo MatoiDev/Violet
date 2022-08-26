@@ -1,12 +1,12 @@
-Package: com.appleworm.violet
+Package: dr.erast.violet
 Name: Violet
 Architecture: iphoneos-arm
 Description: The maid for your 📱 
-Maintainer: AppleWorm <applewormdev@gmail.com>
-Author: AppleWorm <applewormdev@gmail.com>
+Maintainer: Erast <applewormdev@gmail.com>
+Author: Erast <applewormdev@gmail.com>
 Section: Tweaks
-dev: AppleWorm
+dev: Erast
 Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0), com.mrgcgamer.libgcuniversal
 Icon: file:///Library/PreferenceBundles/VioletPreferences.bundle/icon_large.png
-Version: 1.1.1-4+debug
+Version: 1.1.1-2+debug
 Installed-Size: 2560

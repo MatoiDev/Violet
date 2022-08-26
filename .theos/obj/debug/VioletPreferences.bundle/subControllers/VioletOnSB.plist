@@ -18,7 +18,7 @@
                 <key>label</key>
                 <string>Enable</string>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>key</key>
                 <string>ShowOnSB</string>
             </dict>
@@ -34,7 +34,7 @@
                 <key>default</key>
                 <real>0.5</real>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>min</key>
                 <real>0.0</real>
                 <key>max</key>
@@ -54,7 +54,7 @@
                 <key>detail</key>
                 <string>PSListItemsController</string>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>label</key>
                 <string>Blur:</string>
                 <key>key</key>
@@ -126,7 +126,7 @@
                 <key>label</key>
                 <string>Use custom image</string>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>key</key>
                 <string>UseCustomImageOnUnlock</string>
             </dict>
@@ -138,7 +138,7 @@
                 <key>label</key>
                 <string>Custom image</string>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>key</key>
                 <string>CustomImageOnUnlock</string>
                 <key>usesPhotos</key>
@@ -156,7 +156,7 @@
                 <key>label</key>
                 <string>Fill content mode</string>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>key</key>
                 <string>FillSB</string>
             </dict>
@@ -172,7 +172,7 @@
                 <key>default</key>
                 <real>0.0</real>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>min</key>
                 <real>-150.0</real>
                 <key>max</key>
@@ -196,7 +196,7 @@
                 <key>default</key>
                 <real>0.0</real>
                 <key>defaults</key>
-                <string>com.appleworm.violetprefrences</string>
+                <string>dr.erast.violetprefrences</string>
                 <key>min</key>
                 <real>-150.0</real>
                 <key>max</key>

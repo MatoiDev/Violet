@@ -101,11 +101,11 @@
     [violetOnSiriWhenAppearImage setContentMode:UIViewContentModeScaleAspectFit];
     [violetOnSiriWhenAppearImage setClipsToBounds:YES];
 
-    // BOOL isCustomImage = [GcImagePickerUtils isImageInDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImage"];
-    // customImage = [GcImagePickerUtils imageFromDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImage"];
+    // BOOL isCustomImage = [GcImagePickerUtils isImageInDefaults:@"dr.erast.violetprefrences" withKey:@"CustomImage"];
+    // customImage = [GcImagePickerUtils imageFromDefaults:@"dr.erast.violetprefrences" withKey:@"CustomImage"];
 
     if (useCustomImage) {
-        customImage = [GcImagePickerUtils imageFromDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImage"];
+        customImage = [GcImagePickerUtils imageFromDefaults:@"dr.erast.violetprefrences" withKey:@"CustomImage"];
         violetOnSiriWhenAppearImage.image = customImage;
     } else {
         violetOnSiriWhenAppearImage.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/Violetsbehavor/siriAppears.png"];
@@ -330,7 +330,7 @@
     waitingForLord.translatesAutoresizingMaskIntoConstraints = NO;
 
     if (useCustomImageOnUnlock) {
-        customImageOnUnlock = [GcImagePickerUtils imageFromDefaults:@"com.appleworm.violetprefrences" withKey:@"CustomImageOnUnlock"];
+        customImageOnUnlock = [GcImagePickerUtils imageFromDefaults:@"dr.erast.violetprefrences" withKey:@"CustomImageOnUnlock"];
         waitingForLord.image = customImageOnUnlock;
         [waitingForLord setAlpha: 1];
 
@@ -444,7 +444,7 @@
 %ctor {
 
     //alloc preferences
-    preferences = [[HBPreferences alloc] initWithIdentifier:@"com.appleworm.violetprefrences"];
+    preferences = [[HBPreferences alloc] initWithIdentifier:@"dr.erast.violetprefrences"];
     // set enabled bool for Violet
     [preferences registerBool: &enabledViolet default: YES forKey:@"Enabled"];
     if (!enabledViolet) { return ; }
@@ -454,7 +454,7 @@
     if (showOnSB) {
 
         [preferences registerObject: &blurOnSBAmountValue default: @"0.5" forKey: @"OnSBBlur"];
-        [preferences registerObject: &blurEffectStyleOnSB default: @"0" forKey: @"BlurStyleOnSB"];
+        [preferences registerObject: &blurEffectStyleOnSB default: @"2" forKey: @"BlurStyleOnSB"];
         [preferences registerObject: &xPosOnSB default: @"0" forKey: @"SBXPosition"];
         [preferences registerObject: &yPosOnSB default: @"0" forKey: @"SBYPosition"];
         [preferences registerBool: &useCustomImageOnUnlock default: NO forKey: @"UseCustomImageOnUnlock"];
@@ -467,7 +467,7 @@
     if (showOnSiri) {
 
         [preferences registerObject: &blurOnSiriAmountValue default: @"0.5" forKey: @"OnSiriBlur"];
-        [preferences registerObject: &blurEffectStyleOnSiri default: @"0" forKey: @"BlurStyleOnSiri"];
+        [preferences registerObject: &blurEffectStyleOnSiri default: @"2" forKey: @"BlurStyleOnSiri"];
         [preferences registerObject: &xPosOnSiri default: @"0" forKey: @"SiriXPosition"];
         [preferences registerObject: &yPosOnSiri default: @"0" forKey: @"SiriYPosition"];
         [preferences registerBool: &hideOrb default: YES forKey: @"HideOrb"];

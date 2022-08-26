@@ -18,7 +18,7 @@
     self.violetVersion = @"v1.1.1";
     self.appearanceSettings = [VIOPBAppearance new];
     self.hb_appearanceSettings = [self appearanceSettings];
-    self.preferences = [[HBPreferences alloc] initWithIdentifier:@"com.appleworm.violetprefrences"];
+    self.preferences = [[HBPreferences alloc] initWithIdentifier:@"dr.erast.violetprefrences"];
 
     self.enableVioletSwitch = [UISwitch new];
     [[self enableVioletSwitch] setOnTintColor:[UIColor colorWithRed:0.02 green:0.14 blue:0.28 alpha:1]];
@@ -257,7 +257,7 @@
 }
 
 - (void)goVK {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://vk.com/f4ther_of_all"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://vk.com/m4toi"] options:@{} completionHandler:nil];
 }
 
 - (void)goGH {
