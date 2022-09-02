@@ -147,14 +147,48 @@
 
             if ([[self source] isEqual:@"Telegram"]) {
 
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
 
-                    UIImage *avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/telegram/%@", [self userName]]]]];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIView transitionWithView:[self userAvatar] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                            [[self userAvatar] setImage:avatar];
-                        }               completion:nil];
-                    });
+                    self.userAvatar.animationImages = [NSArray arrayWithObjects:
+                            [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/0.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/1.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/2.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/3.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/4.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/5.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/6.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/7.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/8.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/9.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/10.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/11.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/12.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/13.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/14.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/15.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/16.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/17.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/18.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/19.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/20.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/21.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/22.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/23.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/24.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/25.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/26.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/27.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/28.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/29.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/30.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/31.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/32.gif"],
+                                    [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/VioletPreferences.bundle/GIF/33.gif"], nil];
+
+
+                    self.userAvatar.animationDuration = 3.0f;
+                    [self.userAvatar startAnimating];
+
                 });
 
             } else if ([[self source] isEqual:@"GitHub"]) {
