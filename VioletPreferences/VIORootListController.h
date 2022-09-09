@@ -4,6 +4,7 @@
 #import <Cephei/HBRespringController.h>
 #import <CepheiPrefs/HBRootListController.h>
 #import <CepheiPrefs/HBAppearanceSettings.h>
+#import <Lottie/Lottie.h>
 
 @interface VIOPBAppearance : HBAppearanceSettings
 @end

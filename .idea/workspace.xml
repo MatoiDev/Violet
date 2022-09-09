@@ -4,6 +4,16 @@
     <list default="true" id="f7cb7286-ef73-4441-8c0a-3d73fc2ec95f" name="Changes" comment="lotti animated added">
       <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VioletPreferences/Resources/violetGithub.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VioletPreferences/Resources/violetTelegram.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VioletPreferences/Resources/violetVK.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/AWSourceLinkCell.h" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/AWSourceLinkCell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/AWSourceLinkCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/AWSourceLinkCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/Resources/Root.plist" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/Resources/Root.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/VIORootListController.h" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/VIORootListController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VioletPreferences/VIORootListController.m" beforeDir="false" afterPath="$PROJECT_DIR$/VioletPreferences/VIORootListController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control" beforeDir="false" afterPath="$PROJECT_DIR$/control" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -131,6 +142,7 @@
       <workItem from="1662734998099" duration="2165000" />
       <workItem from="1662747340522" duration="5094000" />
       <workItem from="1662754451825" duration="1157000" />
+      <workItem from="1662755614334" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="aligned the image">
       <created>1659266464436</created>

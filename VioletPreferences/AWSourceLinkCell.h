@@ -7,6 +7,7 @@
 
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIKit.h>
+#import <Lottie/Lottie.h>
 
 @interface AWSourceLinkCell : PSTableCell
 
@@ -16,6 +17,7 @@
 @property(nonatomic, retain)UILabel * headerTextArea;
 @property(nonatomic, retain)UILabel * footerTextArea;
 @property(nonatomic, retain)UIView * tapArea;
+@property(nonatomic, retain)UIView * lottieArea;
 @property(nonatomic, retain)UITapGestureRecognizer * cellTap;
 
 // Cell properties

@@ -15,6 +15,12 @@
 -(void)viewDidLoad {
 
     [super viewDidLoad];
+
+//    LOTAnimationView *animation = [LOTAnimationView animationWithFilePath:@"/Library/PreferenceBundles/VioletPreferences.bundle/github.json"];
+//    [self.view addSubview:animation];
+//    [animation setLoopAnimation: YES];
+//    [animation play];
+
     self.violetVersion = @"v1.1.1";
     self.appearanceSettings = [VIOPBAppearance new];
     self.hb_appearanceSettings = [self appearanceSettings];
@@ -122,10 +128,10 @@
 
     [[self titleTimer] invalidate];
     self.titleTimer =  [NSTimer scheduledTimerWithTimeInterval:3.0
-                                     target:self
-                                   selector:@selector(changeLabel)
-                                   userInfo:nil
-                                    repeats:YES];
+                                                        target:self
+                                                      selector:@selector(changeLabel)
+                                                      userInfo:nil
+                                                       repeats:YES];
 
 }
 

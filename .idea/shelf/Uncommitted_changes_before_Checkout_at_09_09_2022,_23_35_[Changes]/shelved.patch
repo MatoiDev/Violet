@@ -1,0 +1,342 @@
+Index: VioletPreferences/Resources/Root.plist
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>items</key>\n\t<array>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSGroupCell</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Violet Settings</string>\n\t\t\t<key>footerText</key>\n\t\t\t<string>Require a respring</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSLinkCell</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Violet on SpringBoard</string>\n\t\t\t<key>detail</key>\n\t\t\t<string>VIOVioletOnSpringBoardListController</string>\n\t\t\t<key>VIOSubController</key>\n\t\t\t<string>subControllers/VioletOnSB</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSLinkCell</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Violet and Siri</string>\n\t\t\t<key>detail</key>\n\t\t\t<string>VIOVioletOnSiriListController</string>\n\t\t\t<key>VIOSubController</key>\n\t\t\t<string>subControllers/VioletAndSiri</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSGroupCell</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Other</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSButtonCell</string>\n\t\t\t<key>cellClass</key>\n\t\t\t<string>HBTintedTableCell</string>\n\t\t\t<key>tintColor</key>\n\t\t\t<string>#FCDD76</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Respring</string>\n\t\t\t<key>action</key>\n\t\t\t<string>justaRespring</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSGroupCell</string>\n\t\t\t<key>label</key>\n\t\t\t<string>Author</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSButtonCell</string>\n\t\t\t<key>cellClass</key>\n\t\t\t<string>AWSourceLinkCell</string>\n\t\t\t<key>source</key>\n\t\t\t<string>GitHub</string>\n\t\t\t<key>footerText</key>\n\t\t\t<string>See more on my GitHub</string>\n\t\t\t<key>username</key>\n\t\t\t<string>MatoiDev</string>\n\t\t\t<key>tintColor</key>\n\t\t\t<string>#CCCCFF</string>\n\t\t\t<key>height</key>\n\t\t\t<real>60</real>\n\t\t\t<key>action</key>\n\t\t\t<string>goGH</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSButtonCell</string>\n\t\t\t<key>cellClass</key>\n\t\t\t<string>AWSourceLinkCell</string>\n\t\t\t<key>source</key>\n\t\t\t<string>Telegram</string>\n\t\t\t<key>username</key>\n\t\t\t<string>Uncle_Milty</string>\n\t\t\t<key>tintColor</key>\n\t\t\t<string>#CCCCFF</string>\n\t\t\t<key>footerText</key>\n\t\t\t<string>To contact me</string>\n\t\t\t<key>height</key>\n\t\t\t<real>60</real>\n\t\t\t<key>action</key>\n\t\t\t<string>goTG</string>\n\t\t</dict>\n\t\t<dict>\n\t\t\t<key>cell</key>\n\t\t\t<string>PSButtonCell</string>\n\t\t\t<key>cellClass</key>\n\t\t\t<string>AWSourceLinkCell</string>\n\t\t\t<key>source</key>\n\t\t\t<string>VK</string>\n\t\t\t<key>rightImage</key>\n\t\t\t<string>scope</string>\n\t\t\t<key>username</key>\n\t\t\t<string>m4toi</string>\n\t\t\t<key>tintColor</key>\n\t\t\t<string>#CCCCFF</string>\n\t\t\t<key>footerText</key>\n\t\t\t<string>Me in VK</string>\n\t\t\t<key>image</key>\n\t\t\t<string>http://pm1.narvii.com/6681/127c66a66553c831bdefe5fd0f618335afa905eb_00.jpg</string>\n\t\t\t<key>height</key>\n\t\t\t<real>60</real>\n\t\t\t<key>action</key>\n\t\t\t<string>goVK</string>\n\t\t</dict>\n\t</array>\n\t<key>title</key>\n\t<string>VioletPreferences</string>\n</dict>\n</plist>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/VioletPreferences/Resources/Root.plist b/VioletPreferences/Resources/Root.plist
+--- a/VioletPreferences/Resources/Root.plist	(revision a0586f75358d4c0394476331332bd7c16c63bbf1)
++++ b/VioletPreferences/Resources/Root.plist	(date 1662755730592)
+@@ -99,8 +99,8 @@
+ 			<string>AWSourceLinkCell</string>
+ 			<key>source</key>
+ 			<string>VK</string>
+-			<key>rightImage</key>
+-			<string>scope</string>
++<!--			<key>rightImage</key>-->
++<!--			<string>scope</string>-->
+ 			<key>username</key>
+ 			<string>m4toi</string>
+ 			<key>tintColor</key>
+Index: control
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Package: dr.erast.violet\nName: Violet\nVersion: 1.1.1\nArchitecture: iphoneos-arm\nDescription: The maid for your \uD83D\uDCF1 \nMaintainer: Erast <applewormdev@gmail.com>\nAuthor: Erast <applewormdev@gmail.com>\nSection: Tweaks\ndev: Erast\nDepends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0), com.mrgcgamer.libgcuniversal\nIcon: file:///Library/PreferenceBundles/VioletPreferences.bundle/icon_large.png\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/control b/control
+--- a/control	(revision a0586f75358d4c0394476331332bd7c16c63bbf1)
++++ b/control	(date 1662755730594)
+@@ -7,5 +7,5 @@
+ Author: Erast <applewormdev@gmail.com>
+ Section: Tweaks
+ dev: Erast
+-Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0), com.mrgcgamer.libgcuniversal
++Depends: mobilesubstrate, ws.hbang.common (>= 1.17), firmware (>= 14.0), com.mrgcgamer.libgcuniversal, com.miro.liblottie
+ Icon: file:///Library/PreferenceBundles/VioletPreferences.bundle/icon_large.png
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1662755611430)
++++ b/.idea/workspace.xml	(date 1662755611430)
+@@ -0,0 +1,275 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="f7cb7286-ef73-4441-8c0a-3d73fc2ec95f" name="Changes" comment="lotti animated added">
++      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="JavaScript File" />
++        <option value="CSS File" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectId" id="2ChoVKnMWwAmnrps0vMmI3u6q1k" />
++  <component name="ProjectLevelVcsManager">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/worm/Desktop/GitProjects/Violet/VioletPreferences/Resources&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;0d570cb2-96df-43cc-80da-7f777e6d0afe&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources" />
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources/Violetsbehavor" />
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources/GIF" />
++      <recent name="$PROJECT_DIR$/VioletPreferences" />
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources/ru.lproj" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources" />
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources/en.lproj" />
++      <recent name="$PROJECT_DIR$/VioletPreferences/Resources/ru.lproj" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="f7cb7286-ef73-4441-8c0a-3d73fc2ec95f" name="Changes" comment="" />
++      <created>1659264204192</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1659264204192</updated>
++      <workItem from="1659264206247" duration="266000" />
++      <workItem from="1659264476020" duration="2463000" />
++      <workItem from="1659304693606" duration="7000" />
++      <workItem from="1659305146657" duration="2000" />
++      <workItem from="1659387306344" duration="9000" />
++      <workItem from="1659514517973" duration="21000" />
++      <workItem from="1659613587659" duration="4757000" />
++      <workItem from="1659654129892" duration="630000" />
++      <workItem from="1659692110315" duration="6000" />
++      <workItem from="1659799772263" duration="274000" />
++      <workItem from="1659990593360" duration="7930000" />
++      <workItem from="1660005928412" duration="773000" />
++      <workItem from="1660039175965" duration="2301000" />
++      <workItem from="1660042598963" duration="522000" />
++      <workItem from="1660069647469" duration="122000" />
++      <workItem from="1660080650429" duration="9068000" />
++      <workItem from="1660091459671" duration="645000" />
++      <workItem from="1660125358384" duration="598000" />
++      <workItem from="1660137126428" duration="1000" />
++      <workItem from="1660239033441" duration="6692000" />
++      <workItem from="1660349476196" duration="4000" />
++      <workItem from="1660383531088" duration="530000" />
++      <workItem from="1660419375405" duration="3729000" />
++      <workItem from="1660429889978" duration="2399000" />
++      <workItem from="1660437722738" duration="1840000" />
++      <workItem from="1660466409721" duration="1505000" />
++      <workItem from="1660473871990" duration="615000" />
++      <workItem from="1660825927003" duration="1116000" />
++      <workItem from="1660847365067" duration="15000" />
++      <workItem from="1660935260314" duration="1000" />
++      <workItem from="1660939276744" duration="825000" />
++      <workItem from="1660940124789" duration="2000" />
++      <workItem from="1661249988208" duration="182000" />
++      <workItem from="1661262055018" duration="4395000" />
++      <workItem from="1661271637533" duration="2897000" />
++      <workItem from="1661280832836" duration="613000" />
++      <workItem from="1661289435735" duration="3104000" />
++      <workItem from="1661294812514" duration="516000" />
++      <workItem from="1661295386672" duration="701000" />
++      <workItem from="1661356061507" duration="860000" />
++      <workItem from="1661429122528" duration="1000" />
++      <workItem from="1661541390429" duration="1054000" />
++      <workItem from="1661723500681" duration="1271000" />
++      <workItem from="1661771295413" duration="8000" />
++      <workItem from="1661802007218" duration="1000" />
++      <workItem from="1661802094960" duration="1637000" />
++      <workItem from="1661805551477" duration="988000" />
++      <workItem from="1661877672823" duration="350000" />
++      <workItem from="1661884015414" duration="976000" />
++      <workItem from="1661891982377" duration="5023000" />
++      <workItem from="1661897150706" duration="103000" />
++      <workItem from="1661897761948" duration="358000" />
++      <workItem from="1661907417316" duration="1591000" />
++      <workItem from="1661938719285" duration="289000" />
++      <workItem from="1662119490183" duration="942000" />
++      <workItem from="1662146564632" duration="290000" />
++      <workItem from="1662150293444" duration="5000" />
++      <workItem from="1662153474311" duration="576000" />
++      <workItem from="1662729569549" duration="4379000" />
++      <workItem from="1662734998099" duration="2165000" />
++      <workItem from="1662747340522" duration="5094000" />
++      <workItem from="1662754451825" duration="1157000" />
++    </task>
++    <task id="LOCAL-00001" summary="aligned the image">
++      <created>1659266464436</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1659266464436</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Remade preference bundle">
++      <created>1659615166319</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1659615166319</updated>
++    </task>
++    <task id="LOCAL-00003" summary="updated preference bundle">
++      <created>1659654157323</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1659654157323</updated>
++    </task>
++    <task id="LOCAL-00004" summary="added some features e.g. changing background blur effect">
++      <created>1660091501459</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1660091501459</updated>
++    </task>
++    <task id="LOCAL-00005" summary="added the ability to change alignment">
++      <created>1660438004382</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1660438004382</updated>
++    </task>
++    <task id="LOCAL-00006" summary="improved some functionality">
++      <created>1660467350791</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1660467350791</updated>
++    </task>
++    <task id="LOCAL-00007" summary="v1.1.1 release">
++      <created>1661275546026</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1661275546026</updated>
++    </task>
++    <task id="LOCAL-00008" summary="v1.1.1 release">
++      <created>1661356269479</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1661356269479</updated>
++    </task>
++    <task id="LOCAL-00009" summary="v1.1.1 release">
++      <created>1661356496364</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1661356496364</updated>
++    </task>
++    <task id="LOCAL-00010" summary="v1.1.1 release">
++      <created>1661356918440</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1661356918440</updated>
++    </task>
++    <task id="LOCAL-00011" summary="v1.1.1 release">
++      <created>1661542433083</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1661542433083</updated>
++    </task>
++    <task id="LOCAL-00012" summary="animated cell">
++      <created>1662153499917</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1662153499917</updated>
++    </task>
++    <task id="LOCAL-00013" summary="lotti animated added">
++      <created>1662752470158</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1662752470158</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="UnknownFeatures">
++    <option featureType="com.intellij.fileTypeFactory" implementationName="Makefile" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="main" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++    <MESSAGE value="aligned the image" />
++    <MESSAGE value="Remade preference bundle" />
++    <MESSAGE value="updated preference bundle" />
++    <MESSAGE value="added some features e.g. changing background blur effect" />
++    <MESSAGE value="added the ability to change alignment" />
++    <MESSAGE value="improved some functionality" />
++    <MESSAGE value="v1.1.1 release" />
++    <MESSAGE value="animated cell" />
++    <MESSAGE value="lotti animated added" />
++    <option name="LAST_COMMIT_MESSAGE" value="lotti animated added" />
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/discord.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/discord.xml b/.idea/discord.xml
+new file mode 100644
+--- /dev/null	(date 1662729658161)
++++ b/.idea/discord.xml	(date 1662729658161)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DiscordProjectSettings">
++    <option name="show" value="PROJECT_FILES" />
++    <option name="description" value="" />
++  </component>
++</project>
+\ No newline at end of file
