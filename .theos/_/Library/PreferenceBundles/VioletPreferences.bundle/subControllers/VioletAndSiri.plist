@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>items</key>
+        <array>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>label</key>
+                <string>Enable Violet on Siri</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSwitchCell</string>
+                <key>default</key>
+                <true/>
+                <key>label</key>
+                <string>Enable</string>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>key</key>
+                <string>ShowOnSiri</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>label</key>
+                <string>Background Blur</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSliderCell</string>
+                <key>default</key>
+                <real>0.5</real>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>min</key>
+                <real>0.0</real>
+                <key>max</key>
+                <real>1.0</real>
+                <key>showValue</key>
+                <true/>
+                <key>isSegmented</key>
+                <false/>
+                <key>key</key>
+                <string>OnSiriBlur</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkListCell</string>
+                <key>default</key>
+                <integer>0</integer>
+                <key>detail</key>
+                <string>PSListItemsController</string>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>label</key>
+                <string>Blur:</string>
+                <key>key</key>
+                <string>BlurStyleOnSiri</string>
+                <key>validValues</key>
+                <array>
+                    <integer>0</integer>
+                    <integer>1</integer>
+                    <integer>2</integer>
+                    <integer>3</integer>
+                    <integer>4</integer>
+                    <integer>5</integer>
+                    <integer>6</integer>
+                    <integer>7</integer>
+                    <integer>8</integer>
+                    <integer>9</integer>
+                    <integer>10</integer>
+                    <integer>11</integer>
+                    <integer>12</integer>
+                    <integer>13</integer>
+                    <integer>14</integer>
+                    <integer>15</integer>
+                    <integer>16</integer>
+                    <integer>17</integer>
+                    <integer>18</integer>
+                    <integer>19</integer>
+                </array>
+                <key>validTitles</key>
+                <array>
+                    <string>Adaptive Ultra Thin</string>
+                    <string>Adaptive Thin</string>
+                    <string>Adaptive</string>
+                    <string>Adaptive Thick</string>
+                    <string>Adaptive Chrome</string>
+                    <string>Light Ultra Thin</string>
+                    <string>Light Thin</string>
+                    <string>Light</string>
+                    <string>Light Thick</string>
+                    <string>Light Chrome</string>
+                    <string>Dark Ultra Thin</string>
+                    <string>Dark Thin</string>
+                    <string>Dark</string>
+                    <string>Dark Thick</string>
+                    <string>Dark Chrome</string>
+                    <string>Additional Extra Light</string>
+                    <string>Additional Light</string>
+                    <string>Additional Dark</string>
+                    <string>Additional Regular</string>
+                    <string>Additional Prominent</string>
+                </array>
+<!--                <key>shortTitles</key>-->
+<!--                <array>-->
+<!--                    <string>Adaptive GG</string>-->
+<!--                    <string>Light HH</string>-->
+<!--                    <string>Dark DD</string>-->
+<!--                </array>-->
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>label</key>
+                <string>Sphere</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSwitchCell</string>
+                <key>default</key>
+                <true/>
+                <key>label</key>
+                <string>Hide</string>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>key</key>
+                <string>HideOrb</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSGroupCell</string>
+                <key>label</key>
+                <string>Custom Image</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSwitchCell</string>
+                <key>default</key>
+                <false/>
+                <key>label</key>
+                <string>Use custom image</string>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>key</key>
+                <string>UseCustomImage</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSLinkCell</string>
+                <key>cellClass</key>
+                <string>GcImagePickerCell</string>
+                <key>label</key>
+                <string>Custom image</string>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>key</key>
+                <string>CustomImage</string>
+                <key>usesPhotos</key>
+                <true/>
+                <key>usesVideos</key>
+                <false/>
+                <key>videoQuality</key>
+                <integer>1</integer>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSStaticTextCell</string>
+                <key>label</key>
+                <string>Horizontal alignment</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSliderCell</string>
+                <key>default</key>
+                <real>0.0</real>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>min</key>
+                <real>-150.0</real>
+                <key>max</key>
+                <real>150.0</real>
+                <key>showValue</key>
+                <true/>
+                <key>isSegmented</key>
+                <false/>
+                <key>key</key>
+                <string>SiriXPosition</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSStaticTextCell</string>
+                <key>label</key>
+                <string>Vertical alignment</string>
+            </dict>
+            <dict>
+                <key>cell</key>
+                <string>PSSliderCell</string>
+                <key>default</key>
+                <real>0.0</real>
+                <key>defaults</key>
+                <string>dr.erast.violetprefrences</string>
+                <key>min</key>
+                <real>-150.0</real>
+                <key>max</key>
+                <real>150.0</real>
+                <key>showValue</key>
+                <true/>
+                <key>isSegmented</key>
+                <false/>
+                <key>key</key>
+                <string>SiriYPosition</string>
+            </dict>
+        </array>
+        <key>title</key>
+        <string>VioletPreferences</string>
+    </dict>
+</plist>
