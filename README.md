@@ -11,10 +11,11 @@ The maid for your iPhone
 
 ### Dependencies 
   - [Cephei](https://github.com/hbang/libcephei)
+  - [LibGcUniversal](https://github.com/MrGcGamer/LibGcUniversalDocumentation)
 
 ### Compiling
   - [Theos](https://theos.dev/) is required to compile the project.
-
+  
 ### Compatibility
 iPhone running 14.x & [15.x?]
 
